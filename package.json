@@ -1,19 +1,29 @@
 {
-  "name": "projeto_13_boardcamp_backend",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dayjs": "^1.10.7",
-    "express": "^4.17.1",
-    "pg": "^8.7.1"
-  }
+	"name": "projeto_13_boardcamp_backend",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "NODE_ENV=test npx jest --run-in-band",
+		"start": "npx nodemon ./src/server.js",
+		"start:dev": "npx kill-port 4000 && NODE_ENV=dev npx nodemon ./src/server.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/plugin-transform-runtime": "^7.16.4",
+		"@babel/preset-env": "^7.16.4",
+		"babel-jest": "^27.3.1",
+		"cors": "^2.8.5",
+		"dayjs": "^1.10.7",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"faker": "^5.5.3",
+		"jest": "^27.3.1",
+		"joi": "^17.4.2",
+		"pg": "^8.7.1",
+		"supertest": "^6.1.6"
+	}
 }
